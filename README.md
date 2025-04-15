@@ -1,12 +1,34 @@
-# React + Vite
+# TodoApp_Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the *TodoApp* project, built using React. It allows users to manage their tasks with the ability to add, update, delete, and view their todo items.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add a new todo
+- Update an existing todo
+- Delete a todo
+- Mark todo as completed
+- Responsive design for various screen sizes
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- *React*: Frontend JavaScript library for building user interfaces.
+- *React Router*: For routing between different pages.
+- *CSS Modules*: For scoped styling and component-specific styles.
+- *Axios*: For making HTTP requests to the backend.
+
+## Setup
+
+To get the project running locally:
+
+### Prerequisites
+
+- Node.js (v14 or above)
+- npm (v6 or above)
+
+### Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/poteswapnil555/TodoApp_Frontend.git
+   cd TodoApp_Frontend
