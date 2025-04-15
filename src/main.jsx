@@ -28,8 +28,13 @@ const AppWrapper = () => {
   );
 };
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <AppWrapper />
-  </StrictMode>
-);
+if (typeof document !== "undefined") {
+  const root = document.getElementById("root");
+  if (root) {
+    createRoot(root).render(
+      <StrictMode>
+        <AppWrapper />
+      </StrictMode>
+    );
+  }
+}

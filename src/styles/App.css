@@ -17,7 +17,7 @@ a {
 .home {
   text-align: center;
   padding-top: 10vmax;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 100;
   text-transform: uppercase;
 }
@@ -25,6 +25,7 @@ a {
 .home p {
   margin: 2rem 0;
   font-weight: 900;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
 }
 
 .todosContainer {
@@ -37,7 +38,7 @@ a {
   height: 100%;
   max-width: 900px;
   margin: auto;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
 }
 
 .todo {
@@ -48,12 +49,14 @@ a {
   justify-content: space-between;
   gap: 1rem;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
 }
 
 .todo > div:last-of-type {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .todo input {
@@ -68,9 +71,11 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 100;
   text-transform: uppercase;
+  padding: 2rem;
+  text-align: center;
 }
 
 .btn {
@@ -109,12 +114,15 @@ a {
   justify-content: space-between;
   padding: 1rem;
   width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .header h2 {
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   font-weight: 400;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
 }
 
 .header a {
@@ -126,6 +134,7 @@ a {
   text-transform: uppercase;
   transition: all 0.3s;
   cursor: pointer;
+  text-align: center;
 }
 
 .header a:hover {
@@ -137,7 +146,7 @@ a {
   max-width: 900px;
   width: 100%;
   margin: auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
   min-height: 80%;
   background-color: rgb(255, 255, 255);
 }
@@ -161,7 +170,8 @@ a {
 
 .login form button {
   font-size: 0.9rem;
-  width: 18.75rem;
+  width: 100%;
+  max-width: 18.75rem;
   padding: 1rem 1.5rem;
   background-color: rgb(51, 51, 51);
   border: 1px solid rgb(51, 51, 51);
@@ -176,8 +186,47 @@ a {
   color: rgb(51, 51, 51);
 }
 
-@media (max-width: 900px) {
-  .login {
-    padding: 0;
+@media (max-width: 768px) {
+  .home {
+    padding-top: 6rem;
+  }
+
+  .todosContainer {
+    padding: 2rem 1rem;
+  }
+
+  .todo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 10rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h2 {
+    font-size: 1rem;
+  }
+
+  .login form input {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .login form button {
+    font-size: 0.8rem;
+  }
+
+  .todo input {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }

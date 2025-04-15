@@ -44,7 +44,7 @@ const Register = () => {
   return (
     <div className="login">
       <section>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} role="form">
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
